@@ -2,69 +2,66 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-* {box-sizing: border-box;}
-
-
-
-.header {
-  overflow: hidden;
-  padding: 20px 10px;
-}
-
-.header a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-
-
-
-.header-right {
-  float: right;
-}
-
-
+@charset "utf-8";
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+.log {
+  width : 100%;
+  height : 100%;
+  background: url(images/bg_login.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 </style>
 
 </head>
-<body>
-<div class="header">
+<body >
+<div class="log">
+  
+<nav class="navbar" id = "myNav">
   <a href="#default" class="logo">B2B E-Commerce</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#login">Login</a>
-    <a href="#register">Register</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+  <nav class="navbar-right">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="login.html" class="active"><i class="fa fa-user-circle-o"></i> Login</a>
+    <a href="registration.html"><i class="fa fa-user-plus"></i> Register</a>
+    <a href="#contact"><i class="fa fa-phone"></i> Contact</a>
+    <a href="#about"><i class="fa fa-info-circle"></i> About</a>
+  </nav>
+</nav>
+    <div id="login">
+      <form name='form-login'>
+        <span ><i class="fa fa-user-circle-o"></i> </span>
+          <input type="text" id="username" placeholder="Username">
+       
+        <span ><i class="fa fa-key"></i></span>
+          <input type="password" id"passwd" placeholder="Password">
+        
+        <input type="submit" value="Login">
+
+      </form>
+    </div>
   </div>
-</div>
-  <section margin-padding="10px">
-        <form method="post" >
-            <label for="username">Username : </label>
-            <input type="text" id="username" placeholder="Username" name="username" required/>
-            <br/>
-            <br/>
-            <label for="passwd">Password : </label>
-            <input type="password" id="passwd" placeholder="********" name="passwd" required/>
-            <br/>
-            <input type="submit" value="Login" required/>
-        </form>
-  </section>
-
-
-
-
 </body>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myNav");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
 </html>
