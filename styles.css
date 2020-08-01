@@ -1,0 +1,282 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+/*navbar*/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  background-color: navy;
+  padding: 5px 2px;
+}
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: border-bottom-color 0.5s ease-out;
+  -webkit-transition: border-bottom-color 0.5s ease-out;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a.logo {
+  width: 15%;
+  height: 50%;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  white-space: nowrap;
+  color: black;
+  border-bottom-color: yellow;
+  background-color: royalblue;
+}
+.navbar a.active {
+  background-color: royalblue;
+  color: white;
+}
+
+.navbar-right {
+  float: right;
+  margin-right: 0px;
+}
+.navbar-right a {
+  white-space: nowrap;
+  font-size: 1.8vw;
+  height: 100%;
+}
+/*navbar ends*/
+
+/*index page search*/
+.first {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: url(../images/behind_search_bar.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.form_search {
+  width: 50%;
+  height: 50px;
+  margin-top: 100px;
+  margin-left: 20%;
+  border: 1px solid #a9a9a9;
+}
+.form_search input:focus,
+.form_search input:active {
+  outline: none;
+}
+.form_search input[type="text"] {
+  width: 80%;
+  border: none;
+  margin: 0px;
+  outline: none;
+  font-size: 25px;
+  padding: 0px;
+  height: 100%;
+}
+
+.form_search .search {
+  background-color: RoyalBlue;
+  color: white;
+  border: none;
+  z-index: 2;
+  width: 20%;
+  height: 100%;
+  padding: 10px 2px;
+  float: right;
+}
+.form_search .search:hover {
+  background-color: #008cba;
+}
+
+input {
+  border: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding: 0;
+  -webkit-appearance: none;
+}
+/*index page search ends */
+
+/*login page */
+#login {
+  background: inherit;
+  margin-left: 50%;
+  margin: 80px auto;
+  width: 340px;
+}
+
+#login form {
+  margin: auto;
+  padding: 22px 22px 22px 22px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: #282e33;
+  opacity: 0.95;
+  border-top: 20px solid #282e33;
+  border-bottom: 20px solid #282e33;
+}
+
+#login form span {
+  background-color: #363b41;
+  border-radius: 3px 0px 0px 3px;
+  border-right: 3px solid #434a52;
+  color: #606468;
+  display: block;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+#login form input[type="text"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 235px;
+  height: 50px;
+}
+
+#login form input[type="password"] {
+  background-color: #3b4148;
+  border-radius: 0px 3px 3px 0px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 235px;
+  height: 50px;
+}
+
+#login form input[type="submit"] {
+  background: #b5cd60;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+#login form input[type="submit"]:hover {
+  background: #16aa56;
+}
+
+/*login page  ends*/
+
+/*registration page  */
+
+.register {
+  width: 100%;
+  height: 100%;
+}
+.registration {
+  height: 100%;
+  margin-left: 60%;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+.register input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 80%;
+  height: 30px;
+  padding: 2px 10px;
+  background: inherit;
+  opacity: 0.5;
+  outline: none;
+  border-bottom: 2px solid black;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  background-image: none;
+  border: 1px solid black;
+}
+.select {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 45px;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 0.5em;
+  color: #ffff;
+  cursor: pointer;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #34495e;
+  pointer-events: none;
+}
+.select:hover::after {
+  color: #f39c12;
+}
+
+.register label {
+  font-size: 20px;
+}
+.table_register {
+  height: 100%;
+  border-spacing: 10px 30px;
+}
+.register form input[type="submit"] {
+  background: navy;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.register form input[type="submit"]:hover {
+  background: green;
+}
+
+/*registration page  */
