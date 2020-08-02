@@ -2,77 +2,100 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://jainam2718.github.io/B2B_E-Commerce/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
-* {box-sizing: border-box;}
-
-
-
-.header {
-  overflow: hidden;
-  padding: 20px 10px;
+html {    
+    background: url(./images/add.jpg) no-repeat center fixed;     
+    background-size: cover;
 }
-
-.header a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 40%;
+  height: 20px;
+  padding: 12px 10px;
+  background: inherit;
+  opacity: 0.5;
+  outline: none;
+  border-bottom: 2px solid black;
 }
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
+.addP{
+  padding-top : 70px;
 }
-
-
-
-
-.header-right {
-  float: right;
+.addProduct{
+  border-spacing: 10px 30px;
 }
-
-
+form input[type="submit"] {
+  background: navy;
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+form input[type="submit"]:hover {
+  background: green;
 }
 </style>
-
 </head>
 <body>
-<div class="header">
+<nav class="navbar" id = "myNav">
   <a href="#default" class="logo">B2B E-Commerce</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#login">Login</a>
-    <a href="#register">Register</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
-</div>
-  <section margin-padding="10px">
-        <form method="post" enctype="multipart/form-data" >
-            <label for="productName">Product Name : </label>
-            <input type="text" id="username" name="productName" required/>
-            <br/>
-            <br/>
-            <label for="productDesc">Product Description : </label>
-            <input type="text" id="productDesc"  name="productDesc" />
-            <br/>
-            <br/>
-            <label for="price">Price : </label>
-            <input type="number" id="price"  name="price" step="0.01" />
-            <br/>
-            <br/>
-            <label for="prImage">Product Image : </label>
-            <input type="file" accept="image/*" id="prImage" name="prImage"/>
-            <br/>
-            <input type="submit" value="POST" required/>
+  <nav class="navbar-right">
+    <a class="active" href="index.html"><i class="fa fa-home"></i> Home</a>
+    <a href="login.html"><i class="fa fa-user-circle-o"></i> Login</a>
+    <a href="registration.html"><i class="fa fa-user-plus"></i> Register</a>
+    <a href="#contact"><i class="fa fa-phone"></i> Contact</a>
+    <a href="#about"><i class="fa fa-info-circle"></i> About</a>
+  </nav>
+</nav>
+  <section class="addP">
+        <form method="post" enctype="multipart/form-data" class="registration">
+        <table class="addProduct">
+          <tr>
+            <td>
+              <label for="productName">Product Name : </label>
+            </td>
+            <td>
+              <input type="text" id="username" name="productName" required/>
+            </td>
+          </tr>
+          <tr>
+            <td>   
+              <label for="productDesc">Product Description : </label>
+            </td>
+            <td>
+              <input type="text" id="productDesc"  name="productDesc" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="price">Price : </label>
+            </td>
+            <td>
+              <input type="number" id="price"  name="price" step="0.01" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="prImage">Product Image : </label>
+            </td>
+            <td>
+              <input type="file" accept="image/*" id="prImage" name="prImage"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <input type="submit" value="Add Product" required/>
+            </td>
+          </tr>
+        </table>
         </form>
   </section>
-
-
-
-
+</div>
 </body>
 </html>
