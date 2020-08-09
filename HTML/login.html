@@ -30,38 +30,30 @@
     <a href="#about"><i class="fa fa-info-circle"></i> About</a>
   </nav>
 </nav>
-    <div id="login">
-      <form name='form-login'>
-        <span ><i class="fa fa-user-circle-o"></i> </span>
-          <input type="text" id="username" placeholder="Username">
-       
-        <span ><i class="fa fa-key"></i></span>
-          <input type="password" id"passwd" placeholder="Password">
+     <div id="login">
+      <form id='myfrm'>
+      <span ><i class="fa fa-user-circle-o"></i> </span>
+        <div class = "stride">
         
+          <input type="text" id="username" placeholder="Username">
+          <i class = "fa fa-exclamation-circle"></i>
+          <small>
+            Error message</small>
+       </div>
+       <span ><i class="fa fa-key"></i></span>
+        <div class = "stride">
+        
+          <input type="password" id="passwd" placeholder="Password">
+          <i class = "fa fa-exclamation-circle"></i>
+          <small>
+            Error message</small>
+        </div>
         <input type="submit" value="Login">
 
       </form>
     </div>
   </div>
 </body>
-
-<script>
-window.onscroll = function() {myFunction()};
-
-// Get the header
-var header = document.getElementById("myNav");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
-</script>
+<script src='../JS/navbar.js'></script>
+<script src='../JS/loginForm.js'></script>
 </html>
