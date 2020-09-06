@@ -2,6 +2,7 @@ const form = document.getElementById("myfrm");
 const username = document.getElementById("username");
 const passwd1 = document.getElementById("passwd");
 form.addEventListener("submit", (e) => {
+  console.log("a");
   e.preventDefault();
   checkInputs();
 });
@@ -10,24 +11,28 @@ function checkInputs() {
   const usernameValue = username.value.trim();
   const password1Value = passwd.value;
   if (usernameValue === "") {
-    setErrorFor(username, "Username Cannot Be Blank");
+    setErrorFor(
+      document.getElementById("usernameError"),
+      "Username Cannot Be Blank"
+    );
   } else {
-    setSuccessFor(username);
+    setSuccessFor(document.getElementById("usernameError"));
   }
   if (password1Value != "") {
-    setSuccessFor(passwd);
+    setSuccessFor(document.getElementById("passwordError"));
   } else {
-    setErrorFor(passwd, "Password Cannot Be Blank");
+    setErrorFor(
+      document.getElementById("passwordError"),
+      "Password Cannot Be Blank"
+    );
   }
 }
 
 function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
+  const small = input.querySelector("small");
   small.innerText = message;
-  formControl.className = "stride error";
+  input.className = "stride error";
 }
 function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "stride success";
+  input.className = "stride success";
 }

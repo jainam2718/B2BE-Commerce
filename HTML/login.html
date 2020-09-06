@@ -1,59 +1,163 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://jainam2718.github.io/B2B_E-Commerce/styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-@charset "utf-8";
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-.log {
-  width : 100%;
-  height : 100%;
-  background: url(../images/bg_login.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-</style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/bootstrap-4.1.3-dist/css/bootstrap.min.css" />
+    <script src="/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 
-</head>
-<body >
-<div class="log">
-  
-<nav class="navbar" id = "myNav">
-  <a href="#default" class="logo">B2B E-Commerce</a>
-  <nav class="navbar-right">
-    <a href="https://jainam2718.github.io/B2B_E-Commerce/"><i class="fa fa-home"></i> Home</a>
-    <a href="login.html" class="active"><i class="fa fa-user-circle-o"></i> Login</a>
-    <a href="registration.html"><i class="fa fa-user-plus"></i> Register</a>
-    <a href="#contact"><i class="fa fa-phone"></i> Contact</a>
-    <a href="#about"><i class="fa fa-info-circle"></i> About</a>
-  </nav>
-</nav>
-     <div id="login">
-      <form id='myfrm'>
-      <span ><i class="fa fa-user-circle-o"></i> </span>
-        <div class = "stride">
-        
-          <input type="text" id="username" placeholder="Username">
-          <i class = "fa fa-exclamation-circle"></i>
-          <small>
-            Error message</small>
-       </div>
-       <span ><i class="fa fa-key"></i></span>
-        <div class = "stride">
-        
-          <input type="password" id="passwd" placeholder="Password">
-          <i class = "fa fa-exclamation-circle"></i>
-          <small>
-            Error message</small>
+    <link rel="stylesheet" href="/styles.css" />
+    <!--<script src="../JS/navbar.js"></script>
+    -->
+    <style>
+      body {
+        background: -webkit-linear-gradient(left, #353368, #bbb1d6);
+      }
+
+      .fa-times-circle {
+        color: red;
+      }
+      .fa-check-circle {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary" id="myNav">
+      <a class="navbar-brand" href="#">B2B E-Commerce</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"
+              ><i class="fa fa-home"></i> Home
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html"
+              ><i class="fa fa-user-circle-o"></i> Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registeration.html"
+              ><i class="fa fa-user-plus"></i> Register</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container get-top-padding">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-header">
+            <h3>Sign In</h3>
+            <div class="d-flex justify-content-end social_icon">
+              <span><i class="fa fa-facebook-square fa-2x"></i></span>
+              <span><i class="fa fa-google-plus-square fa-2x"></i></span>
+              <span><i class="fa fa-twitter-square fa-2x"></i></span>
+            </div>
+          </div>
+          <div class="card-body">
+            <form id="myfrm">
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fa fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Username"
+                  id="username"
+                />
+              </div>
+              <div class="stride" id="usernameError">
+                <i class="fa fa-exclamation-circle"></i>
+                <small> Error message</small>
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fa fa-key"></i
+                  ></span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  id="passwd"
+                />
+              </div>
+              <div class="stride" id="passwordError">
+                <i class="fa fa-exclamation-circle"></i>
+                <small> Error message</small>
+              </div>
+
+              <div class="input-group form-group">
+                <input type="checkbox" /> Remember Me
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Login"
+                  class="btn float-right login_btn"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+              Don't have an account?<a href="registeration.html">Sign Up</a>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="resetPassword.html">Forgot your password?</a>
+            </div>
+          </div>
         </div>
-        <input type="submit" value="Login">
-
-      </form>
+      </div>
     </div>
-  </div>
-</body>
-<script src='../JS/navbar.js'></script>
-<script src='../JS/loginForm.js'></script>
+    <!--<div id="login">
+      <form id="myfrm">
+        <span><i class="fa fa-user-circle-o"></i> </span>
+        <div class="stride">
+          <input type="text" id="username" placeholder="Username" />
+          <i class="fa fa-exclamation-circle"></i>
+          <small> Error message</small>
+        </div>
+        <span><i class="fa fa-key"></i></span>
+        <div class="stride">
+          <input type="password" id="passwd" placeholder="Password" />
+          <i class="fa fa-exclamation-circle"></i>
+          <small> Error message</small>
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+    </div>-->
+  </body>
+  <script src="../JS/loginForm.js"></script>
 </html>
